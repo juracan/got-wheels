@@ -1,0 +1,18 @@
+<!-- begin:header -->
+<div class="header">
+  <app-top-bar></app-top-bar>
+  <!-- begin:site-navigation -->
+  <app-navigation></app-navigation>
+  <!-- end:site-navigation -->
+  <div class="container" *ngIf="showLead">
+    <div class="row justify-content-between">
+      <div class="col-4 align-self-center">
+        <img src="/assets/images/GotWheelsLogo.png" alt="">
+      </div>
+      <div class="col-4">
+         <app-login></app-login>
+      </div>
+    </div><!-- .row -->
+  </div><!-- .container -->
+</div><!-- #header -->
+<!-- end:header -->

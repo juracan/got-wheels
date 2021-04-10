@@ -1,5 +1,8 @@
-<h1>Got Wheels</h1>
+<div class="d-flex flex-column h-100">
+  <app-header [showLead]="showLead"></app-header>
+  <main role="main" class="flex-shrink-0 mt-5">
+    <router-outlet></router-outlet>
+  </main>
 
-<p>
-  what you got?
-</p>
+</div>
+
