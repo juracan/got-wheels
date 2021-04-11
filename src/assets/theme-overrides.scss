@@ -4,5 +4,18 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: 60px;
-  ;
+
+  &.no-lead {
+        min-height: unset;
+        padding: 0;
+  }
 }
+
+.site-header {
+  min-height: unset;
+}
+
+.site-branding .site-title {
+padding-top: 7px;
+}
+
