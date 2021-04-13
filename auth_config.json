@@ -1,0 +1,8 @@
+{
+  "domain": "gotwheelstracker-dev.us.auth0.com",
+  "clientId": "gzWAPjSMxzk6lCMEmkr4m1AyU2GNIrD2",
+  "audience": "Local",
+  "apiUri": "http://localhost:3001",
+  "appUri": "http://localhost:4200",
+  "errorPath": "/error"
+}

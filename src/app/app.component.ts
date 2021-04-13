@@ -21,12 +21,22 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
-        if (event.url === '/dashboard') {
-          this.showLead = true;
-        } else {
-          this.showLead = false;
-        }
+        this.dashboardCheck(event.url);
+        this.passwordRecoveryCheck(event);
       }
     });
+  }
+
+  passwordRecoveryCheck(event: any): void {
+    if (event) {
+    }
+  }
+
+  dashboardCheck(url: string): void {
+    if (url === '/dashboard') {
+      this.showLead = true;
+    } else {
+      this.showLead = false;
+    }
   }
 }

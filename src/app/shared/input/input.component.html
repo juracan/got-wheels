@@ -1,0 +1,8 @@
+<div class="form-group">
+  <label>{{fieldLabel}}:</label>
+  <input [type]="inputType" class="form-control" [placeholder]="placeholderText" [disabled]="disabled" [(ngModel)]="value">
+  <div class="invalid-feedback" [ngClass]="{'d-block mt-0': (isInvalid)}">
+    <!-- {{_fieldMessage}}{{_controlMessage}}{{_groupMessage}} -->
+    error message
+  </div>
+</div>
