@@ -15,6 +15,7 @@ import { LoginComponent } from './presentation/components/login/login.component'
 import { AuthHttpInterceptor, AuthModule } from '@auth0/auth0-angular';
 import { environment as env } from '../environments/environment';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthErrorComponent } from './presentation/auth-error/auth-error.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
     TopBarComponent,
     MyWheelsComponent,
     LoginComponent,
+    AuthErrorComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
