@@ -6,7 +6,7 @@ import { DashboardComponent } from './presentation/dashboard/dashboard.component
 import { FeaturesComponent } from './presentation/features/features.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+  { path: '', component: DashboardComponent },
   { path: 'dashboard', component: DashboardComponent },
   {
     path: 'my-wheels',
