@@ -2,7 +2,7 @@
   "domain": "gotwheelstracker.us.auth0.com",
   "clientId": "eQCIn1ZFYtGNCisToIAdIw3U2cEjFuK1",
   "audience": "Got Wheels Tracker",
-  "apiUri": "https://www.gotwheelstracker.com",
+  "apiUri": "https://gotwheelstracker.us.auth0.com/api/v2/*",
   "appUri": "https://www.gotwheelstracker.com",
   "errorPath": "/error"
 }

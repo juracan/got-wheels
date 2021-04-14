@@ -1,0 +1,21 @@
+<div>
+  <form *ngIf="!showForm" [formGroup]="addWheelsForm" (ngSubmit)="searchVehicle()">
+    <app-input [fieldLabel]="'Search For Hot Wheels Id'" formControlName="itemId"></app-input>
+    <div class="d-flex justify-content-between">
+      <app-button label="Find"></app-button>
+      <app-button label="Add Manually" (click)="showVehicleForm()"></app-button>
+    </div>
+  </form>
+  <!-- {{addWheelsForm.value|json}} -->
+  <div class="mt-2">
+    <app-vehicle *ngIf="foundVehicle" [vehicle]="foundVehicle" (addVehicle)="onAddVehicle($event)" [showAdd]="true"></app-vehicle>
+  </div>
+
+  <div *ngIf="!foundVehicle && searched && !showForm" class="mt-2">
+    <h2 class="bg-warning text-light text-center font-italic">Vehicle Not Found in Hot Wheels API</h2>
+  </div>
+</div>
+
+<div *ngIf="showForm">
+    <app-vehicle-form></app-vehicle-form>
+</div>

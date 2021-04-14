@@ -7,7 +7,7 @@ import {
   Output,
 } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
-import { ILabelValue } from 'src/app/interfaces/label-value.interface';
+import { ILabelValue } from 'src/app/core/interfaces/label-value.interface';
 
 @Component({
   selector: 'app-select',
@@ -49,7 +49,7 @@ export class SelectComponent implements ControlValueAccessor, AfterViewInit {
     this.disabled = isDisabled;
   }
   // event
-  OnSelectChange(item): void {
+  OnSelectChange(item: any): void {
     this.onChange(item);
     this.changed.emit(item);
     console.info(item);

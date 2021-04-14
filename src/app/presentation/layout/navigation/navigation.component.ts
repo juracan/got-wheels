@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { AuthService } from 'src/app/facades/auth.service';
+import { AuthWrapperService } from 'src/app/facades/auth-wrapper.service';
 
 @Component({
   selector: 'app-navigation',
@@ -8,9 +8,7 @@ import { AuthService } from 'src/app/facades/auth.service';
   styleUrls: ['./navigation.component.scss'],
 })
 export class NavigationComponent implements OnInit {
-  constructor(public authService: AuthService) {}
+  constructor(public authWrapper: AuthWrapperService) {}
 
   ngOnInit(): void {}
-
-  onLoginClick(): void {}
 }

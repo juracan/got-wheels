@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { AuthService } from './auth.service';
+import { HotWheelsApiService } from './hot-wheels-api.service';
 
-describe('AuthService', () => {
-  let service: AuthService;
+describe('HotWheelsApiService', () => {
+  let service: HotWheelsApiService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(AuthService);
+    service = TestBed.inject(HotWheelsApiService);
   });
 
   it('should be created', () => {

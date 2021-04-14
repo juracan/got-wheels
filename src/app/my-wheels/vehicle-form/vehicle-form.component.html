@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="col">
+    <form [formGroup]="vehicleForm">
+      <app-input formControlName="toyNumber" fieldLabel="Toy Number"></app-input>
+      <app-input formControlName="packageCode" fieldLabel="Package Code"></app-input>
+      <app-input formControlName="imageUrl" fieldLabel="Image Url"></app-input>
+      <app-input formControlName="title" fieldLabel="Title"></app-input>
+      <app-input formControlName="miniCollection" fieldLabel="Mini Collection"></app-input>
+      <app-input formControlName="colorCode" fieldLabel="Color Code"></app-input>
+      <app-input formControlName="make" fieldLabel="Make"></app-input>
+      <app-input formControlName="year" fieldLabel="Year"></app-input>
+    </form>
+  </div>
+  <div class="col">
+    <app-vehicle [vehicle]="vehiclePreview"
+    (addVehicle)="onAddVehicle()"
+    ></app-vehicle>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <app-button type="button" label="Cancel" [outline]="true" (click)="cancelManualAdd()"></app-button>
+    <app-button type="button" label="Add" (click)="manualAdd()"></app-button>
+  </div>
+
+</div>

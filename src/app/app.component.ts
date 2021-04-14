@@ -33,7 +33,7 @@ export class AppComponent implements OnInit {
   }
 
   dashboardCheck(url: string): void {
-    if (url === '/dashboard') {
+    if (url === '/dashboard' || url === '/') {
       this.showLead = true;
     } else {
       this.showLead = false;

@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +17,9 @@ import { AuthHttpInterceptor, AuthModule } from '@auth0/auth0-angular';
 import { environment as env } from '../environments/environment';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthErrorComponent } from './presentation/auth-error/auth-error.component';
+import { ConfirmationService, MessageService } from 'primeng/api';
+import { LoggerService } from './core/services/logger.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -31,7 +35,9 @@ import { AuthErrorComponent } from './presentation/auth-error/auth-error.compone
     AuthErrorComponent,
   ],
   imports: [
+    FormsModule,
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    HttpClientModule,
     AppRoutingModule,
     SharedModule,
     AuthModule.forRoot({
@@ -60,6 +66,9 @@ import { AuthErrorComponent } from './presentation/auth-error/auth-error.compone
     //     },
     //   },
     // },
+    MessageService,
+    ConfirmationService,
+    LoggerService,
   ],
   bootstrap: [AppComponent],
 })

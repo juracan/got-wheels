@@ -1,0 +1,9 @@
+<h2>All Vehicles</h2>
+<div class="d-flex align-content-stretch align-items-stretch flex-wrap">
+  <!-- <app-vehicle class="d-flex mr-2 mb-2 align-self-stretch" *ngFor="let item of allCars" [vehicle]="item"
+    [showDelete]="true" (deleteVehicle)="onDeleteVehicle($event)"></app-vehicle> -->
+  <app-vehicle class="d-flex mr-2 mb-2 align-self-stretch" *ngFor="let item of itemVehicles$ | async"
+    [itemVehicle]="item"
+    [showDelete]="true"
+    (deleteVehicle)="onDeleteVehicle($event)"></app-vehicle>
+</div>

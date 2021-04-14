@@ -1,0 +1,26 @@
+<ng-container *ngIf="vehicleOutput">
+  <div class="card" style="width: 18rem; border-width: .2rem;"
+    [style.borderColor]="vehicleOutput?.ColorCode ? vehicleOutput.ColorCode : '#fff'">
+    <img class="card-img-top"
+      [src]="vehicleOutput?.MainImages?.length ? vehicleOutput.MainImages[0].URL: 'https://media.mattel.com/root/HWCarsCatalog/Web/MainImage/GHF74_C_003.png'"
+      alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{vehicleOutput?.Title}} <br>
+        <small>
+          <img [src]="vehicleOutput?.MiniCollectionUrl" style="max-height: 1.25rem;">
+          <!-- <img [src]="vehicleOutput?.Styles[0]?.ImageUrl" style="max-height: 1.25rem;"> -->
+          {{vehicleOutput?.MiniCollection}}
+        </small>
+      </h5>
+      <ul>
+        <li><strong>Year:</strong> {{vehicleOutput?.Year}}</li>
+        <li><strong>Toy Number:</strong> {{vehicleOutput?.ToyNumber}}</li>
+        <li><strong>Mini Collection:</strong> {{vehicleOutput?.CarOrderNumber}} of {{vehicleOutput?.TotalItems}}</li>
+      </ul>
+
+      <app-button *ngIf="showAdd" label="Add" (click)="addThisVehicle()"></app-button>
+      <app-button *ngIf="showDelete" label="Delete" (click)="deleteThisVehicle($event)"></app-button>
+    </div>
+  </div>
+  <!-- <pre>{{vehicleOutput|json}}</pre> -->
+</ng-container>
