@@ -17,7 +17,7 @@ import { LoggerService } from './logger.service';
 })
 export class HotWheelsApiService {
   GetProductDetailByToyNumberUrl =
-    'http://product.mattel.com/api/ProductInfo/GetProductDetailByToyNumber';
+    'https://product.mattel.com/api/ProductInfo/GetProductDetailByToyNumber';
 
   constructor(private http: HttpClient, private log: LoggerService) {}
   httpOptions = {
